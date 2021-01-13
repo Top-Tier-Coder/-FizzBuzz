@@ -15,7 +15,22 @@ document.getElementById("fizzButton").addEventListener("click", function () {
 function runTheNumbers(num1, num2) {
     for (let loop = num1; loop <= num2; loop++) {
         document.getElementById("results").innerText += loop;
+        // if(loop % fizzNum == 0 && loop % buzzNum == 0)
+        // Use an if/else if/else to build a string
+        if(loop % fizzNum == 0)
+        {
+            outout += "<span class='Fizz'></span>,";
+        }
+        else if(loop % buzzNum == 0 && loop % buzzNum == 0){
+            output += "Fizz-Buzz,";
+
+        }
+        else{
+            output += `${loop},`;
+        }
     }
+    // Step 6: Print the output to the Screen
+    document.getElementById("fizzbuzzOutput").innerHTML = output
 }
 
 
